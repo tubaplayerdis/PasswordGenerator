@@ -7,7 +7,7 @@
 
 */
 
-const PasswordFiles = require('./Passwords.json')
+const PasswordFiles = './Passwords.json'
 // dont change this unless you want to write to a custom json file
 //Path to .json file /
 // ./Passwords.json is a directory that means the json is in the same folder recommend using a specific directory example below
