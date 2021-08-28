@@ -28,23 +28,22 @@ var amountofpasswords = 20
 */
 
 
-// ========================================================================================================================================================================
+// =============================================================== REAL CODE BELOW ===========================================================================================
 
 
-const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*(){}[],.<>/?';
+
+
+
 const fs = require("fs");
+const crypto = require('crypto')
 
-function generateString(length) {
-    let result = '';
-    const charactersLength = characters.length;
-    for ( let i = 0; i < length; i++ ) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-
-    return result;
-}
-
-
+const generatePassword = (
+  
+  characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz~!@-#$'
+) =>
+  Array.from(crypto.randomFillSync(new Uint32Array(passwordLength)))
+    .map((x) => characters[x % characters.length])
+    .join('')
 
 
 var PasswordJson = [];
@@ -54,7 +53,7 @@ for (var i = 0; i<= amountofpasswords; i++){
     var x   = "Password" + i,
         obj = {};
 
-    obj[x] = [generateString(passwordLength)];
+    obj[x] = [generatePassword()];
 
     PasswordJson.push(obj);
 
