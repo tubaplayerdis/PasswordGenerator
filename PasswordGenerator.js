@@ -31,7 +31,7 @@ var amountofpasswords = 20
 // ========================================================================================================================================================================
 
 
-const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*(){}[],.<>/?';
 const fs = require("fs");
 
 function generateString(length) {
