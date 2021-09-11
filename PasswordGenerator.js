@@ -58,7 +58,7 @@ for (var i = 0; i<= amountofpasswords; i++){
     PasswordJson.push(obj);
 
 }
-// weissnix is a bitch
+// weissnix is a "arsehole"
 
 const jsonString = JSON.stringify(PasswordJson, null, 2)
 console.log(jsonString)
